@@ -74,3 +74,4 @@ gem "httparty"
 
 gem 'mini_magick'
 
+gem 'meta-tags', :require => 'meta_tags'

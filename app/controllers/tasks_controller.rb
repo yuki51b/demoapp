@@ -8,6 +8,8 @@ class TasksController < ApplicationController
 
   # GET /tasks/1 or /tasks/1.json
   def show
+    @task = Task.find(params[:id])
+    prepare_meta_tags(@task)
   end
 
   # GET /tasks/new
@@ -66,5 +68,23 @@ class TasksController < ApplicationController
     # Only allow a list of trusted parameters through.
     def task_params
       params.require(:task).permit(:name)
+    end
+
+    def prepare_meta_tags(task)
+      image_url = "#{request.base_url}/images/ogp.png?text=#{CGI.escape(task.name)}"
+      set_meta_tags og: {
+        site_name: 'サイトネーム',
+        title: task.name,
+        description: 'タスクの詳細説明',
+        type: 'website',
+        url: request.original_url,
+        image: image_url,
+        locale: 'ja-JP'
+      },
+      twitter: {
+        card: 'summary_large_image',
+        site: '@your_twitter_account',
+        image: image_url
+      }
     end
 end
