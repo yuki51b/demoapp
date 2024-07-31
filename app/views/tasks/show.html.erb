@@ -6,7 +6,7 @@
   <%= link_to "Edit this task", edit_task_path(@task) %> |
   <%= link_to "Back to tasks", tasks_path %>
 
-  <%= link_to "ツイッター","https://twitter.com/share?url=#{task_path(@task)}&text=【テスト】%0a%0a#{@task}", target: '_blank', data: { toggle: "tooltip", placement: "bottom" }, title: "Xでシェア"%>
+<%= link_to "ツイッター", "https://twitter.com/share?url=#{CGI.escape(root_url + 'images/ogp.png?text=' + @task.name)}", target: '_blank', data: { toggle: "tooltip", placement: "bottom" }, title: "Xでシェア" %>
 
 
 
