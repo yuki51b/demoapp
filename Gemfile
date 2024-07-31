@@ -71,3 +71,6 @@ end
 
 #  gem httparty install
 gem "httparty"
+
+gem 'mini_magick'
+
