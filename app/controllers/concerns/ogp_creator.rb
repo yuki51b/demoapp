@@ -1,6 +1,6 @@
 class OgpCreator
   require 'mini_magick'
-  BASE_IMAGE_PATH = './app/assets/images/詐欺師の手帳no_anime.jpg'
+  BASE_IMAGE_PATH = './app/assets/images/X_post.jpg'
   GRAVITY = 'center'
   TEXT_POSITION = '0,0'
   FONT = './app/assets/fonts/UtsukushiFONT.otf'
@@ -13,7 +13,7 @@ class OgpCreator
     image = MiniMagick::Image.open(BASE_IMAGE_PATH)
     image.combine_options do |config|
       config.font FONT
-      config.fill 'white'
+      config.fill 'red'
       config.gravity GRAVITY
       config.pointsize FONT_SIZE
       config.draw "text #{TEXT_POSITION} '#{text}'"
