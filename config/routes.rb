@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :steps
   get 'boards/index'
   get 'boards/create'
   resources :tasks

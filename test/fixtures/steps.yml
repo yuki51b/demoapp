@@ -1,0 +1,11 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  gender: MyString
+  food: MyString
+  color: MyString
+
+two:
+  gender: MyString
+  food: MyString
+  color: MyString

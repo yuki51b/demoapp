@@ -1,0 +1,48 @@
+<!-- app/views/users/new.html.erb -->
+<%= form_with model: @step  do |f| %>
+
+  <!-- 性別 -->
+  <div class="field">
+    <%= f.label :gender, "性別" %>
+    <div>
+      <%= f.radio_button :gender, "male" %> 男
+    </div>
+    <div>
+      <%= f.radio_button :gender, "female" %> 女
+    </div>
+  </div>
+
+  <!-- 食べ物 -->
+  <div class="field">
+    <%= f.label :food, "食べ物" %>
+    <div>
+      <%= f.radio_button :food, "rice" %> ご飯
+    </div>
+    <div>
+      <%= f.radio_button :food, "udon" %> うどん
+    </div>
+    <div>
+      <%= f.radio_button :food, "soba" %> そば
+    </div>
+  </div>
+
+  <!-- 色 -->
+  <div class="field">
+    <%= f.label :color, "色" %>
+    <div>
+      <%= f.radio_button :color, "red" %> 赤
+    </div>
+    <div>
+      <%= f.radio_button :color, "blue" %> 青
+    </div>
+    <div>
+      <%= f.radio_button :color, "yellow" %> 黄
+    </div>
+  </div>
+
+  <!-- フォーム送信ボタン -->
+  <div class="actions">
+    <%= f.submit "登録" %>
+  </div>
+
+<% end %>
