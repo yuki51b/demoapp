@@ -12,6 +12,8 @@ Rails.application.routes.draw do
   get "up" => "rails/health#show", as: :rails_health_check
   get 'images/ogp.png', to: 'images#ogp', as: 'images_ogp'
 
+  resources :post
+
 
   # Defines the root path route ("/")
   # root "posts#index"
